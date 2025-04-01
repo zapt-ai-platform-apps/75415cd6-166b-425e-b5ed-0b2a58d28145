@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-10">
+    <footer className="bg-gray-800 dark:bg-gray-900 text-white py-10">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-700 dark:border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {new Date().getFullYear()} Property Ladder. All rights reserved.</p>
         </div>
       </div>

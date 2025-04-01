@@ -6,5 +6,6 @@ export default {
     theme: {
         extend: {},
     },
+    darkMode: 'class', // Enable dark mode with class strategy
     plugins: [],
 };

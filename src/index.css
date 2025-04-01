@@ -34,19 +34,19 @@
     @apply px-4 py-2 rounded font-medium transition-colors duration-200 cursor-pointer;
   }
   .btn-primary {
-    @apply btn bg-blue-600 text-white hover:bg-blue-700;
+    @apply btn bg-blue-600 dark:bg-blue-700 text-white hover:bg-blue-700 dark:hover:bg-blue-800;
   }
   .btn-secondary {
-    @apply btn bg-gray-200 text-gray-800 hover:bg-gray-300;
+    @apply btn bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600;
   }
   .btn-outline {
-    @apply btn border border-blue-600 text-blue-600 hover:bg-blue-50;
+    @apply btn border border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/30;
   }
   .card {
-    @apply bg-white rounded-lg shadow-md p-6;
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6;
   }
   .input {
-    @apply w-full px-4 py-2 border border-gray-300 rounded box-border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    @apply w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded box-border bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
   }
   .container-custom {
     @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;

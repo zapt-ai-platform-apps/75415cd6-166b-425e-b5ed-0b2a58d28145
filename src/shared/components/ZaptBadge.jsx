@@ -7,7 +7,7 @@ const ZaptBadge = () => {
         href="https://www.zapt.ai" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="text-xs font-medium text-gray-600 bg-white px-2 py-1 rounded-md shadow-md hover:bg-gray-100 transition-colors"
+        className="text-xs font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 px-2 py-1 rounded-md shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
       >
         Made on ZAPT
       </a>

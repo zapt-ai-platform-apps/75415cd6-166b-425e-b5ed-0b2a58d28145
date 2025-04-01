@@ -34,7 +34,7 @@ const Calculator = () => {
   return (
     <div className="container-custom py-12">
       <h1 className="mb-4">Investment Calculator</h1>
-      <p className="text-xl text-gray-600 mb-8">
+      <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
         Get personalized investment recommendations based on your financial situation and goals.
       </p>
 
@@ -48,7 +48,7 @@ const Calculator = () => {
           />
           <button 
             onClick={handleReset}
-            className="btn-secondary mt-8"
+            className="btn-secondary mt-8 cursor-pointer"
           >
             Recalculate with Different Data
           </button>

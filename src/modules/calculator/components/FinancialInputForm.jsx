@@ -92,7 +92,7 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Income and Expenses */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Monthly Income ($)</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Monthly Income ($)</label>
             <input
               type="number"
               name="monthlyIncome"
@@ -101,11 +101,11 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
               className={`input ${errors.monthlyIncome ? 'border-red-500' : ''}`}
               placeholder="5000"
             />
-            {errors.monthlyIncome && <p className="text-red-500 text-sm mt-1">{errors.monthlyIncome}</p>}
+            {errors.monthlyIncome && <p className="text-red-500 dark:text-red-400 text-sm mt-1">{errors.monthlyIncome}</p>}
           </div>
           
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Monthly Expenses ($)</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Monthly Expenses ($)</label>
             <input
               type="number"
               name="monthlyExpenses"
@@ -114,12 +114,12 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
               className={`input ${errors.monthlyExpenses ? 'border-red-500' : ''}`}
               placeholder="3000"
             />
-            {errors.monthlyExpenses && <p className="text-red-500 text-sm mt-1">{errors.monthlyExpenses}</p>}
+            {errors.monthlyExpenses && <p className="text-red-500 dark:text-red-400 text-sm mt-1">{errors.monthlyExpenses}</p>}
           </div>
           
           {/* Available Cash and Credit Score */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Available Cash for Investment ($)</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Available Cash for Investment ($)</label>
             <input
               type="number"
               name="availableCash"
@@ -128,11 +128,11 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
               className={`input ${errors.availableCash ? 'border-red-500' : ''}`}
               placeholder="25000"
             />
-            {errors.availableCash && <p className="text-red-500 text-sm mt-1">{errors.availableCash}</p>}
+            {errors.availableCash && <p className="text-red-500 dark:text-red-400 text-sm mt-1">{errors.availableCash}</p>}
           </div>
           
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Credit Score (300-850)</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Credit Score (300-850)</label>
             <input
               type="number"
               name="creditScore"
@@ -143,12 +143,12 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
               min="300"
               max="850"
             />
-            {errors.creditScore && <p className="text-red-500 text-sm mt-1">{errors.creditScore}</p>}
+            {errors.creditScore && <p className="text-red-500 dark:text-red-400 text-sm mt-1">{errors.creditScore}</p>}
           </div>
           
           {/* Existing Debt */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Existing Monthly Debt Payments ($)</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Existing Monthly Debt Payments ($)</label>
             <input
               type="number"
               name="existingDebt"
@@ -157,12 +157,12 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
               className={`input ${errors.existingDebt ? 'border-red-500' : ''}`}
               placeholder="1000"
             />
-            {errors.existingDebt && <p className="text-red-500 text-sm mt-1">{errors.existingDebt}</p>}
+            {errors.existingDebt && <p className="text-red-500 dark:text-red-400 text-sm mt-1">{errors.existingDebt}</p>}
           </div>
           
           {/* Investment Goals */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Primary Investment Goal</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Primary Investment Goal</label>
             <select
               name="investmentGoals"
               value={formData.investmentGoals}
@@ -178,7 +178,7 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
           
           {/* Risk Tolerance */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Risk Tolerance</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Risk Tolerance</label>
             <select
               name="riskTolerance"
               value={formData.riskTolerance}
@@ -193,7 +193,7 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
           
           {/* Investment Timeframe */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Investment Timeframe</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Investment Timeframe</label>
             <select
               name="investmentTimeframe"
               value={formData.investmentTimeframe}
@@ -208,7 +208,7 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
           
           {/* Preferred Locations */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Preferred Locations (optional)</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Preferred Locations (optional)</label>
             <input
               type="text"
               name="preferredLocations"
@@ -221,7 +221,7 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
           
           {/* Property Type Preference */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Property Type Preference</label>
+            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">Property Type Preference</label>
             <select
               name="propertyTypePreference"
               value={formData.propertyTypePreference}
@@ -240,7 +240,7 @@ const FinancialInputForm = ({ onSubmit, loading }) => {
         <div className="mt-8">
           <button
             type="submit"
-            className="btn-primary w-full"
+            className="btn-primary w-full cursor-pointer"
             disabled={loading}
           >
             {loading ? (

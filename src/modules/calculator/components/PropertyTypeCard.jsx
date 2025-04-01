@@ -2,15 +2,15 @@ import React from 'react';
 
 const PropertyTypeCard = ({ propertyType }) => {
   return (
-    <div className="card border border-gray-200 hover:shadow-md transition-shadow h-full flex flex-col">
+    <div className="card border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow h-full flex flex-col">
       <div className="flex-grow">
         <h4 className="font-bold text-lg mb-2">{propertyType.name}</h4>
-        <p className="text-gray-600 mb-4">{propertyType.description}</p>
+        <p className="text-gray-600 dark:text-gray-300 mb-4">{propertyType.description}</p>
         
         <div className="space-y-3 mb-4">
           <div className="flex items-center">
             <span className="font-medium w-1/2">Initial Investment:</span>
-            <span className="text-gray-700">${propertyType.initialInvestment.toLocaleString()}</span>
+            <span className="text-gray-700 dark:text-gray-300">${propertyType.initialInvestment.toLocaleString()}</span>
           </div>
           <div className="flex items-center">
             <span className="font-medium w-1/2">Cash Flow Potential:</span>
@@ -18,7 +18,7 @@ const PropertyTypeCard = ({ propertyType }) => {
               {Array(5).fill(0).map((_, i) => (
                 <svg 
                   key={i}
-                  className={`h-5 w-5 ${i < propertyType.cashFlowRating ? 'text-yellow-400' : 'text-gray-300'}`}
+                  className={`h-5 w-5 ${i < propertyType.cashFlowRating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const PropertyTypeCard = ({ propertyType }) => {
               {Array(5).fill(0).map((_, i) => (
                 <svg 
                   key={i}
-                  className={`h-5 w-5 ${i < propertyType.appreciationRating ? 'text-yellow-400' : 'text-gray-300'}`}
+                  className={`h-5 w-5 ${i < propertyType.appreciationRating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const PropertyTypeCard = ({ propertyType }) => {
               {Array(5).fill(0).map((_, i) => (
                 <svg 
                   key={i}
-                  className={`h-5 w-5 ${i < propertyType.managementComplexity ? 'text-yellow-400' : 'text-gray-300'}`}
+                  className={`h-5 w-5 ${i < propertyType.managementComplexity ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ const PropertyTypeCard = ({ propertyType }) => {
         
       <div>
         <h5 className="font-semibold mb-2">Best for:</h5>
-        <ul className="list-disc pl-5 text-sm text-gray-600">
+        <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-gray-300">
           {propertyType.bestFor.map((item, index) => (
             <li key={index}>{item}</li>
           ))}

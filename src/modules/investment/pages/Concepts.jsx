@@ -16,7 +16,7 @@ const Concepts = () => {
   return (
     <div className="container-custom py-12">
       <h1 className="mb-4">Real Estate Investment Concepts</h1>
-      <p className="text-xl text-gray-600 mb-8">
+      <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
         Understanding these fundamental concepts will help you make informed real estate investment decisions.
       </p>
 
@@ -35,7 +35,7 @@ const Concepts = () => {
         <div>
           <button 
             onClick={() => setActiveConcept(null)}
-            className="btn-secondary mb-6 flex items-center"
+            className="btn-secondary mb-6 flex items-center cursor-pointer"
           >
             <svg className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -61,8 +61,8 @@ const Concepts = () => {
                       onClick={() => setActiveConcept(concept)}
                     >
                       <h3 className="text-xl font-bold mb-2">{concept.title}</h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">{concept.description}</p>
-                      <button className="text-blue-600 hover:text-blue-800 font-medium">
+                      <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">{concept.description}</p>
+                      <button className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium">
                         Read More →
                       </button>
                     </div>
@@ -74,10 +74,10 @@ const Concepts = () => {
 
           {filteredConcepts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-xl text-gray-600">No concepts match your search term.</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">No concepts match your search term.</p>
               <button
                 onClick={() => setSearchTerm('')}
-                className="btn-primary mt-4"
+                className="btn-primary mt-4 cursor-pointer"
               >
                 Clear Search
               </button>

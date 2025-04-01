@@ -26,10 +26,10 @@ const CountrySelector = ({ countries, onSelect, selectedCountry }) => {
               <li key={country}>
                 <button
                   onClick={() => onSelect(country)}
-                  className={`w-full text-left px-4 py-2 rounded transition-colors ${
+                  className={`w-full text-left px-4 py-2 rounded transition-colors cursor-pointer ${
                     selectedCountry === country
-                      ? 'bg-blue-100 text-blue-700 font-medium'
-                      : 'hover:bg-gray-100'
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 font-medium'
+                      : 'hover:bg-gray-100 dark:hover:bg-gray-700'
                   }`}
                 >
                   {country}
@@ -38,7 +38,7 @@ const CountrySelector = ({ countries, onSelect, selectedCountry }) => {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500 text-center py-4">No countries match your search</p>
+          <p className="text-gray-500 dark:text-gray-400 text-center py-4">No countries match your search</p>
         )}
       </div>
     </div>
